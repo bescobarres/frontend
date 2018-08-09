@@ -1,0 +1,24 @@
+@import "~src/app/scss/styles-variables";
+@import  "~src/app/scss/variables.scss";
+
+.header-style{
+  height: 10vh;
+  width: 100vw;
+  background-color: $secondary-color2;
+}
+
+.boton-buscar{
+  background-color: $primary-color;
+  border-radius: 10%;
+  color: $quaternary-color2;
+}
+
+.boton-menu{
+  background-color: $primary-color;
+  border-radius: 10%;
+  color: $quaternary-color2;
+}
+
+.input-search{
+  width: 10vw;
+}
