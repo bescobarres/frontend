@@ -1,7 +1,7 @@
 import { FacturaDTO } from './FacturaDTO';
 
 export class ResponseDTO {
-public data: Array<FacturaDTO>;
+public data: FacturaDTO[];
 public code: number;
 public message: string;
 }

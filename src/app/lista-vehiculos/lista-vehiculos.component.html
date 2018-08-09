@@ -1,2 +1,49 @@
-<div class="container">
+<div class="container-fluid">
+    <div class="lista-vehiculos">
+        <h2>Lista Facturas con carros</h2>
+        <table class="table">
+            <thead class="text-danger">
+                <tr>
+                    <th>ID</th>
+                    <th>Placa</th>
+                    <th>Fecha Ingreso</th>
+                    <th>Fecha Salida</th>
+                    <th>Valor Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let factura of listaFacturasCarros">
+                    <td>{{factura.facturaId}}</td>
+                    <td>{{factura.vehiculo.placa}}</td>
+                    <td>{{factura.fechaEntrada}}</td>
+                    <td>{{factura.fechaSalida}}</td>
+                    <td class="text-danger">${{factura.valorTotal}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br/>
+    <div class="lista-vehiculos">
+        <h2>Lista Facturas con motos</h2>
+        <table class="table">
+                <thead class="text-danger">
+                    <tr>
+                        <th>ID</th>
+                        <th>Placa</th>
+                        <th>Fecha Ingreso</th>
+                        <th>Fecha Salida</th>
+                        <th>Valor Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let factura of listaFacturasMotos">
+                        <td>{{factura.facturaId}}</td>
+                        <td>{{factura.vehiculo.placa}}</td>
+                        <td>{{factura.fechaEntrada}}</td>
+                        <td>{{factura.fechaSalida}}</td>
+                        <td class="text-danger">${{factura.valorTotal}}</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
 </div>

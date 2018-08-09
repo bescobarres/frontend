@@ -1,0 +1,13 @@
+@import "~src/app/scss/styles-variables";
+@import  "~src/app/scss/variables.scss";
+
+.lista-vehiculos{
+    color: $primary-color;
+    margin-bottom: 0px;
+    padding-bottom: 0%;
+}
+
+.table{
+        padding: 0 !important;
+        margin: 0 !important;
+}

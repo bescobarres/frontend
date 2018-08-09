@@ -1,0 +1,49 @@
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Ingresar Vehiculo</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+            <label for="placaVehiculo">Placa Vehiculo</label>
+            <div class="input-group">
+              <input id="placaVehiculo" type="text">
+            </div>
+            
+          <label for="fechaIngreso">Fecha Ingreso</label>
+          <div class="input-group">
+            <input id="fechaIngreso" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" (click)="dp.toggle()" type="button">
+                <img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+    </div>
+  </ng-template>
+  
+<div class="container-fluid">
+  <div class="row formulario-vehiculos">
+    <div class="col-sm">
+    </div>
+    <div class="col-sm tipo-carro" (click)="open(content)">
+      <img class="img-vehiculo" src="src/assets/img/car.png" />
+    </div>
+    <div class="col-sm tipo-moto">
+      <img class="img-vehiculo" src="src/assets/img/scooter.png" />
+    </div>
+    <div class="col-sm">
+      </div>
+  </div>
+</div>
+
+
+<pre>{{closeResult}}</pre>
